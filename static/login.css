@@ -1,0 +1,122 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQxrquKpe5SqKmwMlW53P_XualjebS0FWOjw&s);
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-login{
+    font-size: 30px;
+    color: white;
+}
+
+.input-service-email input{
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgb(251, 250, 250);
+  border-radius: 10px;
+  font-size: 16px;
+  color: rgb(239, 236, 236);
+  padding: 15px 5px 15px 15px;
+  margin-bottom: 10px;
+}
+.input-service-email{
+    padding: 10px;
+}
+.input-service-email input::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.input-service-password input{
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgb(251, 250, 250);
+  border-radius: 10px;
+  font-size: 16px;
+  color: rgb(239, 236, 236);
+  padding: 15px 5px 15px 15px;
+  margin-bottom: 10px;
+}
+.input-service-password{
+    padding: 10px;
+    padding-bottom: 7px;
+}
+.input-service-password input::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.submit-button button{
+  width: 250px;
+  height: 50px;
+  background-color: #02f302;
+  border: none;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  margin-top: 24px;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.submit-button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.submit-button button:hover {
+  background-color: #00af00;
+  transition: 0.2s;
+}
+
+.submit-button button:active {
+  background-color: #27da27;
+  transition: 0.1s;
+}
+
+.container{
+  margin: auto;
+  width: 300px;
+  background-color: rgb(255, 0, 0);
+  text-align: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1); 
+  border: 2px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 10px;
+  padding: 10px 40px;
+  position: relative;
+  backdrop-filter: blur(20px); 
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  z-index: 1;
+}
+
+.cadast-link{
+    color: white;
+    padding-top: none;
+    padding-left: 14px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.cadast-link a{
+    color: rgb(116, 0, 211);
+}
+.cadast-link a:hover{
+    color: rgb(71, 0, 129);
+}
+.cadast-link a:active{
+    color: rgb(87, 26, 136);
+}
