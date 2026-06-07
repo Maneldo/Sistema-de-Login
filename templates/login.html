@@ -10,21 +10,36 @@
 
 <body>
     <div class="container">
-    <form method="POST">
-        <h2 class="text-login" >LOGIN</h2>
-        <div class="input-service-email">
-            <input placeholder="Email" required type="email">
-        </div>
-        <div class="input-service-password">
-            <input placeholder="Senha" required type="password">
-        </div>
-        <div class="cadast-link">
-        Não possui conta? <a href="/cadastro">Criar uma conta</a>
-        </div>
-        <div class="submit-button">
-<button type="submit"><b>LOGIN</b></button>
-        </div>
-    </form>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for mensagem in messages %}
+        {% if mensagem == 'Acesso Concedido' %}
+        <p style="color: rgb(0, 255, 0);"><b>{{ mensagem }}</b></p>
+        {% else %}
+        <p style="color: red;"><b>{{ mensagem }}</b></p>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <form method="POST">
+            <h1 class="text-login">LOGIN</h1>
+            <p class="text-login">Coloque seus dados corretamente para acessar</p>
+            <div class="input-service-email">
+                <input placeholder="Email" required type="email" name="email">
+            </div>
+            <div class="input-service-password">
+                <input placeholder="Senha" minlength="8" required type="password" name="password">
+            </div>
+            <div class="cadast-link">
+                Esqueceu sua senha? <a href="/recuperar">Recuperar Senha</a>
+            </div>
+            <div class="submit-button">
+                <button type="submit"><b>LOGIN</b></button>
+            </div>
+            <div class="cadast2-link">
+                Não possui uma conta? <a href="/cadastro">Criar uma conta</a>
+            </div>
+        </form>
     </div>
 </body>
 

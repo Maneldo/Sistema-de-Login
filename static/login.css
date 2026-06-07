@@ -1,8 +1,10 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQxrquKpe5SqKmwMlW53P_XualjebS0FWOjw&s);
+    background-image: url('imagens/background.jpg');
     margin: 0;
+    background-size: cover;
     min-height: 100vh;
+    background-color: black;
 
     display: flex;
     justify-content: center;
@@ -10,12 +12,11 @@ body{
 }
 
 .text-login{
-    font-size: 30px;
     color: white;
+    width: 100%;
 }
 
 .input-service-email input{
-  padding-bottom: 20px;
   width: 100%;
   height: 100%;
   background: transparent;
@@ -25,11 +26,13 @@ body{
   border-radius: 10px;
   font-size: 16px;
   color: rgb(239, 236, 236);
-  padding: 15px 5px 15px 15px;
-  margin-bottom: 10px;
+  padding: 15px 0px 15px 10px;
+  margin-bottom: 5px;
 }
+
 .input-service-email{
-    padding: 10px;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 .input-service-email input::placeholder {
   color: rgb(255, 255, 255);
@@ -46,12 +49,11 @@ body{
   border-radius: 10px;
   font-size: 16px;
   color: rgb(239, 236, 236);
-  padding: 15px 5px 15px 15px;
+  padding: 15px 0px 15px 10px;
   margin-bottom: 10px;
 }
 .input-service-password{
-    padding: 10px;
-    padding-bottom: 7px;
+    padding-bottom: 5px;
 }
 .input-service-password input::placeholder {
   color: rgb(255, 255, 255);
@@ -62,10 +64,10 @@ body{
   height: 50px;
   background-color: #02f302;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   color: rgb(255, 255, 255);
   font-weight: 500;
-  margin-top: 24px;
+  margin-top: 25px;
   cursor: pointer;
   outline: none;
   font-size: 20px;
@@ -105,18 +107,27 @@ body{
 
 .cadast-link{
     color: white;
-    padding-top: none;
-    padding-left: 14px;
     padding-bottom: 10px;
-    text-align: left;
+    width: 100%;
+}
+
+.cadast2-link{
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 7px;
+    width: 100%;
 }
 
 .cadast-link a{
-    color: rgb(116, 0, 211);
+    color: rgb(0, 200, 200);
 }
 .cadast-link a:hover{
-    color: rgb(71, 0, 129);
+    color: rgb(98, 218, 218);
 }
-.cadast-link a:active{
-    color: rgb(87, 26, 136);
+
+.cadast2-link a{
+    color: rgb(0, 200, 200);
+}
+.cadast2-link a:hover{
+    color: rgb(98, 218, 218);
 }
