@@ -33,7 +33,6 @@ cd Sistema-de-Login-Flask-e-Sqlite3
 Instale as dependências:
 
 ```md
-```bash
 pip install -r requirements.txt
 ```
 
