@@ -9,14 +9,14 @@ def create_db():
 CREATE TABLE IF NOT EXISTS usuarios (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
     nome TEXT NOT NULL,
-    password TEXT NOT NULL,
-    email TEXT NOT NULL,
-    horario TEXT DEFAULT CURRENT_DATE NOT NULL,
+    password BLOB NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    data_criacao TEXT DEFAULT CURRENT_DATE NOT NULL,
     estado TEXT NOT NULL
 )
 ''')
     conn.commit()
-    cur.close()
+    conn.close()
     
 # Verificar de email ja está cadastrado
 def check_email(email):
@@ -67,16 +67,6 @@ def login_user(email, password):
     
     return 'Email ou Senha incorretos'
 
-def user_things(id):
-    conn = sqlite3.connect('users.db')
-    cur = conn.cursor()
-    cur.execute('SELECT * FROM usuarios WHERE id=?', (id,))
-    # Pegar dados
-    result = cur.fetchone()
-    conn.close()
-    print(result)
-    return result
-
 def id_from_email(email):
     conn = sqlite3.connect('users.db')
     cur = conn.cursor()
@@ -84,5 +74,13 @@ def id_from_email(email):
     # Pegar dados
     result = cur.fetchone()
     conn.close()
-    print(result)
+    return result
+
+def user_data(id):
+    conn = sqlite3.connect('users.db')
+    cur = conn.cursor()
+    cur.execute('SELECT * FROM usuarios WHERE id=?', (id,))
+    # Pegar dados
+    result = cur.fetchone()
+    conn.close()
     return result

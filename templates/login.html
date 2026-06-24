@@ -13,7 +13,7 @@
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for mensagem in messages %}
-        {% if mensagem == 'Acesso Concedido' %}
+        {% if mensagem == 'Acesso Concedido' or mensagem == 'Conta criada com sucesso! Faça login para continuar.' %}
         <p style="color: rgb(0, 255, 0);"><b>{{ mensagem }}</b></p>
         {% else %}
         <p style="color: red;"><b>{{ mensagem }}</b></p>
@@ -29,9 +29,6 @@
             </div>
             <div class="input-service-password">
                 <input placeholder="Senha" minlength="8" required type="password" name="password">
-            </div>
-            <div class="cadast-link">
-                Esqueceu sua senha? <a href="/recuperar">Recuperar Senha</a>
             </div>
             <div class="submit-button">
                 <button type="submit"><b>LOGIN</b></button>
