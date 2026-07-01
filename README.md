@@ -18,9 +18,12 @@ Sistema web simples de autenticação desenvolvido com Flask, SQLite e bcrypt.
 - Flask
 - SQLite
 - bcrypt
-- python-dotenv
 - HTML
 - CSS
+
+## Foto do Projeto
+<img width="1366" height="721" alt="image" src="https://github.com/user-attachments/assets/1444fd96-abe2-4ea7-8427-dacb9ba78dcf" />
+
 
 ## Instalação
 
